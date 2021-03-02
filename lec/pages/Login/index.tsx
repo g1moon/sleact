@@ -51,8 +51,9 @@ function Login() {
         return <div>로딩중...</div>
     }
 
-    if (data) {
-        return <Redirect to='/workspace/channel'/>
+    if (data) { //Is is mean that the login status is true
+        return <Redirect from='/login' to='/workspace/channel'/>
+        // return <div>saksdjf</div>;
     }
 
     return (
