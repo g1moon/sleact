@@ -1,0 +1,7 @@
+{
+  "printWidth": 120, /*80하면 줄 바꿈이 많아짐*/
+  "tabWidth": 4,
+  "singleQuote": true,
+  "trailingComma": "all", /*항상 콤마를 뒤에 붙인*/
+  "semi": true /*세미콜론도 항상 붙인다*/
+}

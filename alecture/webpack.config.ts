@@ -7,7 +7,7 @@ import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 const isDevelopment = process.env.NODE_ENV !== 'production';
 
 const config: webpack.Configuration = {
-  name: 'sleact',
+  name: 'g1moon',
   mode: isDevelopment ? 'development' : 'production',
   devtool: !isDevelopment ? 'hidden-source-map' : 'eval',
   resolve: {
@@ -73,8 +73,8 @@ const config: webpack.Configuration = {
     publicPath: '/dist/',
   },
   devServer: {
-    historyApiFallback: true, // react router
-    port: 3090,
+    historyApiFallback: true, // react router할떄 필요한 설
+    port: 3090, //프론트 서버 3090 백엔드 3095
     publicPath: '/dist/',
     proxy: {
       '/api/': {
