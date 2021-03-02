@@ -1,12 +1,9 @@
 import React from 'react';
 import loadable from '@loadable/component';
-import { Switch, Route, Redirect } from 'react-router-dom';
-import Channel from "@pages/Channel";
-
-
+import {Switch, Route, Redirect, BrowserRouter} from 'react-router-dom';
 
 const SignUp = loadable(() => import('@pages/SignUp'));
-const Login = loadable(() => import('@pages/Login'));
+const LogIn = loadable(() => import('@pages/Login'));
 const Workspace = loadable(() => import('@layouts/Workspace'));
 
 const App = () => {
@@ -15,13 +12,15 @@ const App = () => {
         // <div>
         //     layouts/app/index.tsx
         // </div>
+        <BrowserRouter>
         <Switch>
             <Redirect exact path="/" to="/login" />
+            <Route path="/login" component={LogIn} />
             <Route path="/signup" component={SignUp} />
-            <Route path='/login' component={Login} />
-            <Route path="/workspace/channel" component={Channel} />
+            <Route path="/workspace" component={Workspace} />
         </Switch>
-        // </div>
+        </BrowserRouter>
+
     );
 };
 
